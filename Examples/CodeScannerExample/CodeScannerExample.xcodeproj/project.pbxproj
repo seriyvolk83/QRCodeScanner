@@ -13,6 +13,7 @@
 		FD8D855E2578E8CB009D5DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8D855D2578E8CB009D5DD9 /* Assets.xcassets */; };
 		FD8D85612578E8CB009D5DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD8D855F2578E8CB009D5DD9 /* LaunchScreen.storyboard */; };
 		FD8D856A2578E90E009D5DD9 /* CodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8D85692578E90E009D5DD9 /* CodeScannerViewController.swift */; };
+		FD8D856C2578F7FD009D5DD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FD8D856B2578F7FD009D5DD9 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FD8D85602578E8CB009D5DD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD8D85622578E8CB009D5DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD8D85692578E90E009D5DD9 /* CodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodeScannerViewController.swift; path = ../../../Source/CodeScannerViewController.swift; sourceTree = "<group>"; };
+		FD8D856B2578F7FD009D5DD9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				FD8D85682578E8D2009D5DD9 /* General */,
+				FD8D856B2578F7FD009D5DD9 /* README.md */,
 				FD8D85582578E8C8009D5DD9 /* ViewController.swift */,
 				FD8D85692578E90E009D5DD9 /* CodeScannerViewController.swift */,
 				FD8D85622578E8CB009D5DD9 /* Info.plist */,
@@ -135,6 +138,7 @@
 			files = (
 				FD8D85612578E8CB009D5DD9 /* LaunchScreen.storyboard in Resources */,
 				FD8D855E2578E8CB009D5DD9 /* Assets.xcassets in Resources */,
+				FD8D856C2578F7FD009D5DD9 /* README.md in Resources */,
 				FD8D855C2578E8C8009D5DD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

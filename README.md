@@ -37,8 +37,34 @@ end
 
 ## Usage
 
+- Add `NSCameraUsageDescription` to `Info.plist`, e.g.:
+```
+<key>NSCameraUsageDescription</key>
+<string>Will scan QR codes</string>
+```
+- Create view controller in XIB and set its class to `CodeScannerViewController` and specify identifier, e.g. `CodeScannerViewController`
+- Add view, set its class to `CameraPreviewView` and connect it with `previewView` outlet.
+- Instantiate `CodeScannerViewController` in code and configure using public vars and callbacks, e.g. you need at least define `callbackCodeScanned`.
+- Optionally configure:
+- - `codeTypes` - to limit the recognized code types
+- - `delegate` - to handle different states of the scanner (add `import AVFoundation`)
+- Dismiss the view controller in `callbackCodeScanned` callback.
+
 ```swift
 
+import QRCodeScanner83
+import AVFoundation
+
+...
+
+guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "CodeScannerViewController") as? CodeScannerViewController else {
+    return
+}
+vc.callbackCodeScanned = { code in
+    print("SCANNED CODE: \(code)")
+    vc.dismiss(animated: true, completion: nil)
+}
+self.present(vc, animated: true, completion: nil)
 ```
 
 ## Updates

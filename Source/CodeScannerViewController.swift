@@ -58,7 +58,7 @@ public protocol CodeScannerViewControllerDelegate {
     return
  }
  vc.callbackCodeScanned = { code in
-    print("code: \(code)")
+    print("SCANNED CODE: \(code)")
     vc.dismiss(animated: true, completion: nil)
  }
  self.present(vc, animated: true, completion: nil)
