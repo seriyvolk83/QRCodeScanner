@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CodeScannerExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--Code Scanner View Controller-->
+        <scene sceneID="NlO-gU-4Mr">
+            <objects>
+                <viewController storyboardIdentifier="CodeScannerViewController" id="lZE-o5-KZr" customClass="CodeScannerViewController" customModule="CodeScannerExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VwE-4g-LJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kss-3e-Q1f" customClass="CameraPreviewView" customModule="CodeScannerExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Nr1-gw-QKA" firstAttribute="bottom" secondItem="kss-3e-Q1f" secondAttribute="bottom" id="cTa-w3-UZR"/>
+                            <constraint firstItem="kss-3e-Q1f" firstAttribute="top" secondItem="Nr1-gw-QKA" secondAttribute="top" id="e58-Dm-gwW"/>
+                            <constraint firstItem="Nr1-gw-QKA" firstAttribute="trailing" secondItem="kss-3e-Q1f" secondAttribute="trailing" id="u3H-Tp-RrG"/>
+                            <constraint firstItem="kss-3e-Q1f" firstAttribute="leading" secondItem="Nr1-gw-QKA" secondAttribute="leading" id="wht-PO-42Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nr1-gw-QKA"/>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="kss-3e-Q1f" id="KKq-f0-w7m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uel-Je-YpS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813" y="138"/>
+        </scene>
+    </scenes>
+</document>
