@@ -64,7 +64,7 @@ public protocol CodeScannerViewControllerDelegate {
  self.present(vc, animated: true, completion: nil)
  ```
  */
-class CodeScannerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVCaptureMetadataOutputObjectsDelegate, AVCapturePhotoCaptureDelegate {
+public class CodeScannerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVCaptureMetadataOutputObjectsDelegate, AVCapturePhotoCaptureDelegate {
     
     /// preview views
     @IBOutlet weak var previewView: CameraPreviewView!
@@ -115,7 +115,7 @@ class CodeScannerViewController: UIViewController, UIImagePickerControllerDelega
     // MARK: - Camera initialization
     
     /// Initializes AVCaptureSession and configures camera
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         session = AVCaptureSession()
         
@@ -199,7 +199,7 @@ class CodeScannerViewController: UIViewController, UIImagePickerControllerDelega
     /// Turn on camera.
     ///
     /// - Parameter animated: the animation flag
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         viewAppear = true
         if accessVerifiedAndAllowed {
             session?.startRunning()
@@ -356,7 +356,7 @@ class CodeScannerViewController: UIViewController, UIImagePickerControllerDelega
     ///   - output: the output
     ///   - metadataObjects: the metadataObjects
     ///   - connection: the connection
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+    public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if state == .hasCamera || state == .detecting {
             let types: [AVMetadataObject.ObjectType] = codeTypes
             for metadataObject in metadataObjects {
@@ -611,7 +611,7 @@ class CodeScannerViewController: UIViewController, UIImagePickerControllerDelega
     
     // MARK: - AVCapturePhotoCaptureDelegate
     @available(iOS 11.0, *)
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+    public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         // Remove output from session
         self.session?.removeOutput(output)
         
