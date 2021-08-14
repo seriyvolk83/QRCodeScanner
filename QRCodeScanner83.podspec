@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "QRCodeScanner83"
-  s.version     = "0.0.3"
+  s.version     = "0.0.4"
   s.summary     = "Simple and extendable QR code/barcode/etc. scanner for iOS apps."
   s.homepage    = "https://github.com/seriyvolk83/QRCodeScanner"
   s.license     = { :type => "MIT" }
